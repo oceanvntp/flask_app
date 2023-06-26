@@ -1,0 +1,1 @@
+conda list -e | awk -F'=' '{print $1,"==",$2}' | sed 's/ //g' | sed '/^#/d' > requirements.txt
